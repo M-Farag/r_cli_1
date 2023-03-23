@@ -1,3 +1,10 @@
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let args:Vec<String> = env::args().collect();
+
+    for (i , arg) in args.iter().enumerate() 
+    {
+        println!("{} - {}",i+1,arg.as_str());
+    }
 }
